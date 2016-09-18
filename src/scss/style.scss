@@ -3,6 +3,8 @@
 //----------------------------------*/
 
 @import 'mixins/_position.scss';
+@import 'mixins/_button.scss';
+
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -11,6 +13,7 @@
 // Config modules
 @import 'modules/_vars.scss';
 @import 'modules/_clearfix.scss';
+@import 'modules/_flex.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_normalize.scss';
 //----------------------------------*\

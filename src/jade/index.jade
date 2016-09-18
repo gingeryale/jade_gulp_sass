@@ -1,0 +1,139 @@
+doctype html
+html(lang='en')
+	// The language defaults to English - update accordingly if necessary 
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='')
+		meta(name='author', content='')
+
+		title Gulp Boilerplate with Jade      
+
+		// PNG favicon 
+		link(rel='icon', type='image/png', href='img/favicon.png')
+
+		// Main CSS file and normalize.css (https://github.com/necolas/normalize.css/) or reset of your preference  
+		link(rel='stylesheet', href='../../assets/css/style.min.css')
+		
+		script(src='assets/components/modernizr/modernizr.js')
+
+
+	body
+		div.cta-bg
+		div.container
+			div.cta
+				span.flex-left There are many variations of Lorem Ipsum
+					button.btn Learn More
+				p.line
+				span.flex-right All the Lorem Ipsum generators end
+					button.btn Learn More
+			div.brand
+				.logo 
+					img(src='assets/img/logo.png')
+				.flex-right.header-contacts
+					.tel 1-888-123-1234
+						span
+							button patient portal
+							button make an appointment
+			div
+				nav.nav
+					ul
+						li: a(href='#')
+							span Home
+
+						li: a(href='#')
+							span Our Providers
+
+						li: a(href='#')
+							span Treatment & Care
+
+						li: a(href='#')
+							span Resources
+
+						li: a(href='#')
+							span Blog
+
+						li: a(href='#')
+							span Location
+
+						li: a(href='#')
+							span Contact Us
+			div
+				span.flex-left
+					|	Contact Us <br />
+					|	Please complete the form below to contact Sunshine Group
+
+			div
+				div.flex-left.form-control
+					span.flex-row 
+						span.flex-left.patient-status 
+						|	Are you a current patient of Sunshine Group? *
+						span.flex-right.patient-control 
+							input(type='radio', name='chooseone', value='yes')
+							label(for='yes')  Yes
+							input(type='radio', name='chooseone', value='no')
+							label(for='no')  No
+
+
+					span.flex-left
+						input(type='text' placeholder='Name')
+
+					span.flex-right
+						input(type='text' placeholder='Last Name')
+
+					span.flex-left
+						input(type='text' placeholder='Email')
+
+					span.flex-right
+						input(type='text' placeholder='Phone')
+
+					span.flex-row
+						select(name='select-choice', class='subject')
+							option(value='Choice 1') Subject
+							option(value='Choice 2') Choice 1
+							option(value='Choice 2') Choice 2
+
+					textarea.flex-row(name='description', cols='40', rows='5' placeholder='Comments')
+
+					span.flex-left
+					select(name='select-choice', class='how')
+						option(value='Choice 1') How did you hear about us?
+						option(value='Choice 2') Choice 1
+						option(value='Choice 2') Choice 2
+
+					span.flex-right
+						input(type='text' placeholder='Additional Refereal Details')
+
+					span.flex-left
+						| * Fields are required
+
+					span.flex-right
+						button Send
+					p Please be aware that we cannot ensure that communications sent over the Internet are secure. This includes correspondence sent through this form or by email. If you are uncomfortable with such risks, you may contact us by phone instead of using this form. Do not include any Confidential Health information.
+
+				div.flex-right.map-control
+					span.flex-left Office:
+					span.map
+
+					p 
+						| Sunshine Group Health, P.A. <br />
+						| 100 Left Avenue, Sunchine, NY <br />
+						| Tel 800-777-2424
+						
+			footer.footer
+				img(src='assets/img/logo.png')
+				span Sunshine Group Health, P.A. — 100 Left Avenue, Sunchine, NY — Phone: 617-800-7373
+				
+
+
+		// Content of your website or application 
+
+		// Bundled JavaScript file 
+		script(src='../../assets/components/jquery/jquery.min.js')
+		script(src='../../assets/js/scripts.min.js')
+		script(type='text/javascript', src='https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.js')
+		script.
+		// Picture element HTML5 shiv
+		document.createElement( 'picture' )

@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     sourcemaps = require('gulp-sourcemaps'),
+    gulpjade    = require('gulp-jade'),
     package = require('./package.json');
 
 
@@ -52,6 +53,18 @@ gulp.task('js',function(){
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
+/**
+* piping gulp jade
+**/
+
+gulp.task('gulpjade', function() { 
+  gulp.src('./src/jade/*.jade')
+    .pipe(gulpjade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./app'))
+});
+
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
@@ -63,8 +76,9 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+gulp.task('default', ['gulpjade', 'css', 'js', 'browser-sync'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
+    gulp.watch('src/jade/*.jade',['gulpjade'] );
     gulp.watch("app/*.html", ['bs-reload']);
 });

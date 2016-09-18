@@ -1,9 +1,17 @@
 .nav {
+	eight: 36px;
+    background: #43c8ab;
+    width: 100%;
   ul {
-    list-style: none;
+    justify-content: space-between;
     li {
+    	list-style: none;
+    	display:inline-flex;
       a {
-
+		text-decoration:none;
+		text-transform:uppercase;
+		padding:10px;
+		color:#fff;
       }
     }
   }

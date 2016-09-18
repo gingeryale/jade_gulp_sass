@@ -1,9 +1,76 @@
 .header {
 
 }
+
+.btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 3px;
+	font-size: 1em;
+}
+.container{
+	width: 915px;
+	margin: 0 auto;
+	border:1px solid grey;
+}
+.cta-bg{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    background: #e1e71b;
+    height: 70px;
+    z-index: -1;
+}
+.cta{
+	display: flex;
+	justify-content: space-between;
+	height: 70px;
+
+	span {
+		padding: 25px;
+	}
+
+	p {
+		border-right: 1px solid darkgreen;
+	}
+
+	.btn {
+   		@include btn-bg(#a8ae00, 6.75rem, 1.5rem, 0.8em);
+	}
+}
+.flex-left{
+	@extend %flex-left;
+}
+
+.flex-right{
+	@extend %flex-right;
+}
+.flex-row {
+	flex-direction: row;
+}
+.brand{
+	height: 150px;
+}
+.form-control{
+	width: 550px;
+    display: inline-block;
+}
+.patient-control {
+	display:inline-block;
+	vertical-align:top;
+}
+.patient-status{
+	display:inline-block;
+}
+.map-control{
+	width:300px;
+	display:inline-block;
+	vertical-align:top;
+}
 .logo {
-  margin: -58px 0 0 -100px;
-  @include position(absolute, 50% 0 0 50%);
+  margin:0;
+  @include position(relative, 0 0 0 0);
   img {
 
   }

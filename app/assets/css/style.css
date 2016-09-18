@@ -7,23 +7,24 @@
   .clear:after {
     clear: both; }
 
-* {
-  box-sizing: border-box;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+.flex-left {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.flex-right {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 html {
-  font-size: 62.5%;
-  background: radial-gradient(ellipse at center, #F7F6F0 0, #c2ba8c 80%, #b0a66b 100%); }
-
-body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
-  transition: all .4s .3s ease-in; }
-
-body, html {
-  min-height: 100vh;
-  overflow: hidden; }
+  font-size: 16px; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -391,14 +392,105 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.logo {
-  margin: -58px 0 0 -100px;
-  position: absolute;
-  top: 50%;
-  left: 50%; }
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 1em; }
 
-.nav ul {
-  list-style: none; }
+.container {
+  width: 915px;
+  margin: 0 auto;
+  border: 1px solid grey; }
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #e1e71b;
+  height: 70px;
+  z-index: -1; }
+
+.cta {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px; }
+  .cta span {
+    padding: 25px; }
+  .cta p {
+    border-right: 1px solid darkgreen; }
+  .cta .btn {
+    background: #a8ae00;
+    width: 6.75rem;
+    height: 1.5rem;
+    font-size: 0.8em; }
+    .cta .btn:hover {
+      background: #818500;
+      transition: all 0.3s ease; }
+    .cta .btn:active {
+      background: #2d2f00; }
+
+.flex-row {
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.brand {
+  height: 150px; }
+
+.form-control {
+  width: 550px;
+  display: inline-block; }
+
+.patient-control {
+  display: inline-block;
+  vertical-align: top; }
+
+.patient-status {
+  display: inline-block; }
+
+.map-control {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top; }
+
+.logo {
+  margin: 0;
+  position: relative; }
+
+.nav {
+  eight: 36px;
+  background: #43c8ab;
+  width: 100%; }
+  .nav ul {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .nav ul li {
+      list-style: none;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      .nav ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px;
+        color: #fff; }
+
+.footer {
+  background: #43aaff; }
+
+.btn {
+  color: white;
+  white-space: normal;
+  border-radius: 5px;
+  padding: 3px;
+  border: none; }
 
 @font-face {
   font-family: 'Font-Name';

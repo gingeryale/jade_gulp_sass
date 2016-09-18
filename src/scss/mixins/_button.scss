@@ -1,0 +1,13 @@
+@mixin btn-bg($bg, $width, $height, $font-size) {
+	background: $bg;
+	width: $width;
+	height: $height;
+	font-size: $font-size;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
